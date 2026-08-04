@@ -1,185 +1,253 @@
 import React from "react";
+import {
+  FaFilePdf,
+  FaRobot,
+  FaCheckCircle,
+  FaExclamationTriangle,
+  FaClock,
+  FaRupeeSign,
+  FaProjectDiagram,
+  FaDownload,
+  FaLightbulb
+} from "react-icons/fa";
 
-
-function Reports() {
-
-  const reports = [
-
-    {
-      id: 1,
-      requirement: "Payment Gateway Integration",
-      module: "Payment Module",
-      risk: "High",
-      status: "Completed",
-      date: "29 July 2026"
-    },
-
-
-    {
-      id: 2,
-      requirement: "User Login Enhancement",
-      module: "Authentication Module",
-      risk: "Medium",
-      status: "Completed",
-      date: "28 July 2026"
-    },
-
-
-    {
-      id: 3,
-      requirement: "Database Migration",
-      module: "Database Module",
-      risk: "High",
-      status: "Pending",
-      date: "27 July 2026"
-    }
-
-  ];
-
-
-
+function Report() {
   return (
+    <section id="report" className="report-section py-5">
 
-    <section id="reports" className="container my-5">
+      <div className="container">
 
+        {/* Heading */}
 
-      <h1 className="text-center fw-bold text-primary mb-4">
+        <div
+          className="text-center mb-5"
+          data-aos="fade-up"
+        >
+          <h1 className="report-title">
+            AI Generated Impact Report
+          </h1>
 
-        Impact Analysis Reports
+          <p className="report-subtitle">
+            Intelligent Software Requirement Change Analysis
+          </p>
+        </div>
 
-      </h1>
+        {/* Main Card */}
 
+        <div
+          className="report-main-card"
+          data-aos="zoom-in"
+        >
 
+          <div className="row">
 
+            {/* Left */}
 
-      <div className="card shadow p-4">
+            <div className="col-lg-6">
 
+              <h3>
+                <FaRobot className="me-2 text-primary"/>
+                Requirement Details
+              </h3>
 
-        <table className="table table-hover">
+              <hr/>
 
+              <p><strong>Requirement ID :</strong> REQ-001</p>
 
-          <thead className="table-dark">
+              <p><strong>Project :</strong> Smart Impact Analyzer</p>
 
-            <tr>
+              <p><strong>Module :</strong> Payment Gateway</p>
 
-              <th>
-                ID
-              </th>
+              <p>
+                <strong>Description :</strong>
+                Add secure online payment functionality with OTP verification.
+              </p>
 
-              <th>
-                Requirement
-              </th>
+            </div>
 
-              <th>
-                Affected Module
-              </th>
+            {/* Right */}
 
-              <th>
-                Risk
-              </th>
+            <div className="col-lg-6">
 
-              <th>
-                Status
-              </th>
+              <h3>
 
-              <th>
-                Date
-              </th>
+                <FaCheckCircle className="me-2 text-success"/>
 
-            </tr>
+                AI Prediction
 
-          </thead>
+              </h3>
 
+              <hr/>
 
+              <p>
 
-          <tbody>
+                Impact Level
 
+              </p>
 
-            {
-              reports.map((report)=>(
+              <div className="progress mb-3">
 
-                <tr key={report.id}>
+                <div
+                  className="progress-bar bg-danger"
+                  style={{width:"90%"}}
+                >
+                  High
+                </div>
 
+              </div>
 
-                  <td>
-                    {report.id}
-                  </td>
+              <p>
 
+                Prediction Accuracy
 
-                  <td>
-                    {report.requirement}
-                  </td>
+              </p>
 
+              <div className="progress">
 
-                  <td>
-                    {report.module}
-                  </td>
+                <div
+                  className="progress-bar bg-success"
+                  style={{width:"95%"}}
+                >
+                  95%
+                </div>
 
+              </div>
 
-                  <td>
+            </div>
 
-                    {
-                      report.risk === "High" ?
+          </div>
 
-                      <span className="badge bg-danger">
-                        High
-                      </span>
+        </div>
 
-                      :
+        {/* Information Cards */}
 
-                      <span className="badge bg-warning text-dark">
-                        Medium
-                      </span>
-                    }
+        <div className="row mt-5 g-4">
 
-                  </td>
+          <div
+            className="col-md-3"
+            data-aos="fade-up"
+          >
+            <div className="info-box">
 
+              <FaProjectDiagram className="report-icon"/>
 
-                  <td>
+              <h4>7</h4>
 
-                    {
-                      report.status === "Completed" ?
+              <p>Affected Modules</p>
 
-                      <span className="badge bg-success">
-                        Completed
-                      </span>
+            </div>
+          </div>
 
-                      :
+          <div
+            className="col-md-3"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div className="info-box">
 
-                      <span className="badge bg-secondary">
-                        Pending
-                      </span>
-                    }
+              <FaExclamationTriangle className="report-icon text-danger"/>
 
-                  </td>
+              <h4>High</h4>
 
+              <p>Risk Level</p>
 
-                  <td>
-                    {report.date}
-                  </td>
+            </div>
+          </div>
 
+          <div
+            className="col-md-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div className="info-box">
 
-                </tr>
+              <FaRupeeSign className="report-icon text-success"/>
 
+              <h4>₹1.20L</h4>
 
-              ))
-            }
+              <p>Estimated Cost</p>
 
+            </div>
+          </div>
 
-          </tbody>
+          <div
+            className="col-md-3"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div className="info-box">
 
+              <FaClock className="report-icon text-warning"/>
 
-        </table>
+              <h4>12 Days</h4>
 
+              <p>Timeline</p>
+
+            </div>
+          </div>
+
+        </div>
+
+        {/* AI Recommendation */}
+
+        <div
+          className="recommend-card mt-5"
+          data-aos="fade-up"
+        >
+
+          <h3>
+
+            <FaLightbulb className="me-2 text-warning"/>
+
+            AI Recommendation
+
+          </h3>
+
+          <ul>
+
+            <li>Authentication module dependency is very high.</li>
+
+            <li>Payment service will impact 7 connected modules.</li>
+
+            <li>Perform integration testing before deployment.</li>
+
+            <li>Increase backend testing coverage.</li>
+
+            <li>Recommended team: Backend + Database + QA.</li>
+
+          </ul>
+
+        </div>
+
+        {/* Download */}
+
+        <div
+          className="text-center mt-5"
+          data-aos="zoom-in"
+        >
+
+          <button className="btn btn-danger btn-lg px-5">
+
+            <FaFilePdf className="me-2"/>
+
+            Download PDF Report
+
+          </button>
+
+          <button className="btn btn-primary btn-lg px-5 ms-3">
+
+            <FaDownload className="me-2"/>
+
+            Export Report
+
+          </button>
+
+        </div>
 
       </div>
 
-
     </section>
-
   );
-
 }
 
-
-export default Reports;
+export default Report;

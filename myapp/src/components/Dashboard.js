@@ -7,130 +7,235 @@ import {
   FaChartLine,
   FaFileAlt,
   FaCheckCircle,
-  FaClock
+  FaClock,
+  FaPlusCircle,
+  FaUpload,
+  FaDownload,
+  FaHistory
 } from "react-icons/fa";
 
 function Dashboard() {
   return (
-    <section id="dashboard" className="dashboard-section">
+    <section id="dashboard" className="dashboard-section py-5">
 
       <div className="container">
 
-        {/* Heading */}
+        {/* Dashboard Header */}
 
-        <div className="text-center mb-5">
+        <div className="dashboard-header mb-5">
 
-          <h1 className="dashboard-title">
-            Smart Impact Analyzer Dashboard
-          </h1>
+          <h2>Welcome Back 👋</h2>
 
-          <p className="dashboard-subtitle">
-            Monitor AI-powered software impact analysis and prediction reports.
+          <p>
+            AI Powered Requirement Change Impact Analysis Dashboard
           </p>
 
         </div>
 
-        {/* Dashboard Cards */}
+        {/* Statistics */}
 
         <div className="row g-4">
 
           <div className="col-lg-3 col-md-6">
             <div className="dashboard-card">
-
-              <FaClipboardList className="dashboard-icon text-primary" />
-
+              <FaClipboardList className="dashboard-icon text-primary"/>
               <h2>120</h2>
-
-              <p>Requirements</p>
-
+              <p>Total Requirements</p>
             </div>
           </div>
 
           <div className="col-lg-3 col-md-6">
             <div className="dashboard-card">
-
-              <FaRobot className="dashboard-icon text-success" />
-
+              <FaRobot className="dashboard-icon text-success"/>
               <h2>95%</h2>
-
               <p>Prediction Accuracy</p>
-
             </div>
           </div>
 
           <div className="col-lg-3 col-md-6">
             <div className="dashboard-card">
-
-              <FaProjectDiagram className="dashboard-icon text-warning" />
-
+              <FaProjectDiagram className="dashboard-icon text-warning"/>
               <h2>35</h2>
-
               <p>Affected Modules</p>
-
             </div>
           </div>
 
           <div className="col-lg-3 col-md-6">
             <div className="dashboard-card">
-
-              <FaExclamationTriangle className="dashboard-icon text-danger" />
-
+              <FaExclamationTriangle className="dashboard-icon text-danger"/>
               <h2>High</h2>
-
               <p>Risk Level</p>
-
             </div>
           </div>
 
         </div>
 
-        {/* AI Summary */}
+        {/* AI Prediction Summary */}
 
         <div className="report-card mt-5">
 
           <h3>
-
-            <FaChartLine className="me-2" />
-
+            <FaChartLine className="me-2"/>
             AI Prediction Summary
-
           </h3>
 
           <p>
-            The AI engine predicts that the latest requirement changes
-            mainly affect Authentication, Payment, Database and Notification
-            modules.
+            The AI engine predicts that Payment, Authentication,
+            Database and Notification modules are highly affected.
           </p>
 
-          <div className="mt-4">
+          <div className="row mt-4">
 
-            <h6>Prediction Accuracy</h6>
+            <div className="col-md-6">
 
-            <div className="progress">
+              <h6>Prediction Accuracy</h6>
 
-              <div
-                className="progress-bar bg-success"
-                style={{ width: "95%" }}
-              >
-                95%
+              <div className="progress mb-3">
+                <div
+                  className="progress-bar bg-success"
+                  style={{width:"95%"}}
+                >
+                  95%
+                </div>
+              </div>
+
+            </div>
+
+            <div className="col-md-6">
+
+              <h6>Risk Level</h6>
+
+              <div className="progress mb-3">
+                <div
+                  className="progress-bar bg-danger"
+                  style={{width:"80%"}}
+                >
+                  High
+                </div>
               </div>
 
             </div>
 
           </div>
 
-          <div className="mt-4">
+          <div className="row text-center mt-4">
 
-            <h6>Risk Level</h6>
+            <div className="col-md-4">
+              <h5>₹1,20,000</h5>
+              <small>Estimated Cost</small>
+            </div>
 
-            <div className="progress">
+            <div className="col-md-4">
+              <h5>12 Days</h5>
+              <small>Estimated Timeline</small>
+            </div>
 
-              <div
-                className="progress-bar bg-danger"
-                style={{ width: "80%" }}
-              >
-                High Risk
+            <div className="col-md-4">
+              <h5>97%</h5>
+              <small>AI Confidence</small>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Quick Actions */}
+
+        <div className="report-card mt-5">
+
+          <h3>Quick Actions</h3>
+
+          <div className="row g-3 mt-2">
+
+            <div className="col-md-3">
+              <button className="btn btn-primary w-100">
+                <FaPlusCircle className="me-2"/>
+                New Analysis
+              </button>
+            </div>
+
+            <div className="col-md-3">
+              <button className="btn btn-success w-100">
+                <FaUpload className="me-2"/>
+                Upload File
+              </button>
+            </div>
+
+            <div className="col-md-3">
+              <button className="btn btn-warning w-100">
+                <FaDownload className="me-2"/>
+                Generate PDF
+              </button>
+            </div>
+
+            <div className="col-md-3">
+              <button className="btn btn-dark w-100">
+                <FaHistory className="me-2"/>
+                History
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Charts */}
+
+        <div className="row mt-5">
+
+          <div className="col-lg-6">
+
+            <div className="report-card">
+
+              <h3>Impact Distribution</h3>
+
+              <p>Frontend</p>
+
+              <div className="progress mb-3">
+                <div className="progress-bar" style={{width:"80%"}}></div>
               </div>
+
+              <p>Backend</p>
+
+              <div className="progress mb-3">
+                <div className="progress-bar bg-success" style={{width:"70%"}}></div>
+              </div>
+
+              <p>Database</p>
+
+              <div className="progress mb-3">
+                <div className="progress-bar bg-warning" style={{width:"60%"}}></div>
+              </div>
+
+              <p>API</p>
+
+              <div className="progress">
+                <div className="progress-bar bg-danger" style={{width:"90%"}}></div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className="col-lg-6">
+
+            <div className="report-card">
+
+              <h3>AI Recommendation</h3>
+
+              <ul>
+
+                <li>Authentication module has highest dependency.</li>
+
+                <li>Payment Gateway affects 7 modules.</li>
+
+                <li>Estimated development effort: 12 Days.</li>
+
+                <li>Recommended Team: Backend + Database.</li>
+
+                <li>Overall project risk is High.</li>
+
+              </ul>
 
             </div>
 
@@ -138,16 +243,13 @@ function Dashboard() {
 
         </div>
 
-        {/* Recent Reports */}
+        {/* Reports */}
 
         <div className="report-card mt-5">
 
           <h3>
-
             <FaFileAlt className="me-2"/>
-
             Recent Analysis Reports
-
           </h3>
 
           <div className="table-responsive">
@@ -162,9 +264,9 @@ function Dashboard() {
 
                   <th>Requirement</th>
 
-                  <th>Module</th>
-
                   <th>Risk</th>
+
+                  <th>Accuracy</th>
 
                   <th>Status</th>
 
@@ -175,93 +277,19 @@ function Dashboard() {
               <tbody>
 
                 <tr>
-
                   <td>REQ-001</td>
-
-                  <td>Payment Gateway Integration</td>
-
-                  <td>Payment</td>
-
-                  <td>
-
-                    <span className="badge bg-danger">
-
-                      High
-
-                    </span>
-
-                  </td>
-
-                  <td>
-
-                    <span className="badge bg-success">
-
-                      Completed
-
-                    </span>
-
-                  </td>
-
+                  <td>Payment Gateway</td>
+                  <td><span className="badge bg-danger">High</span></td>
+                  <td>95%</td>
+                  <td><span className="badge bg-success">Completed</span></td>
                 </tr>
 
                 <tr>
-
                   <td>REQ-002</td>
-
-                  <td>User Authentication Update</td>
-
-                  <td>Authentication</td>
-
-                  <td>
-
-                    <span className="badge bg-warning text-dark">
-
-                      Medium
-
-                    </span>
-
-                  </td>
-
-                  <td>
-
-                    <span className="badge bg-primary">
-
-                      Running
-
-                    </span>
-
-                  </td>
-
-                </tr>
-
-                <tr>
-
-                  <td>REQ-003</td>
-
-                  <td>Notification Service</td>
-
-                  <td>Messaging</td>
-
-                  <td>
-
-                    <span className="badge bg-info">
-
-                      Low
-
-                    </span>
-
-                  </td>
-
-                  <td>
-
-                    <span className="badge bg-success">
-
-                      Completed
-
-                    </span>
-
-                  </td>
-
+                  <td>Authentication Update</td>
+                  <td><span className="badge bg-warning text-dark">Medium</span></td>
+                  <td>91%</td>
+                  <td><span className="badge bg-primary">Running</span></td>
                 </tr>
 
               </tbody>
@@ -272,53 +300,41 @@ function Dashboard() {
 
         </div>
 
-        {/* System Status */}
+        {/* Bottom Section */}
 
-        <div className="row mt-5 g-4">
+        <div className="row mt-5">
 
-          <div className="col-md-6">
+          <div className="col-lg-6">
 
             <div className="report-card">
 
               <h3>
-
                 <FaCheckCircle className="text-success me-2"/>
-
-                System Status
-
+                System Health
               </h3>
 
-              <p>✔ AI Engine : Online</p>
-
-              <p>✔ Database : Connected</p>
-
-              <p>✔ Machine Learning Model : Active</p>
-
-              <p>✔ Prediction Service : Running</p>
+              <p>🟢 AI Engine Online</p>
+              <p>🟢 Database Connected</p>
+              <p>🟢 ML Model Active</p>
+              <p>🟢 API Running</p>
 
             </div>
 
           </div>
 
-          <div className="col-md-6">
+          <div className="col-lg-6">
 
             <div className="report-card">
 
               <h3>
-
                 <FaClock className="text-primary me-2"/>
-
                 Recent Activity
-
               </h3>
 
-              <p>09:30 AM - Requirement Uploaded</p>
-
-              <p>09:31 AM - AI Prediction Completed</p>
-
-              <p>09:33 AM - Risk Analysis Generated</p>
-
-              <p>09:35 AM - Report Downloaded</p>
+              <p>09:30 Requirement Uploaded</p>
+              <p>09:31 AI Started</p>
+              <p>09:33 Dependencies Detected</p>
+              <p>09:35 PDF Generated</p>
 
             </div>
 
