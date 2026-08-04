@@ -64,20 +64,24 @@ section {
 .home-section {
   min-height: 100vh;
   position: relative;
-  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 45%, #2563eb 100%);
+  background: linear-gradient(135deg, #07111f 0%, #0f2d6b 42%, #2563eb 100%);
+  overflow: hidden;
 }
 
 .home-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(255,255,255,0.18), transparent 30%);
+  background: radial-gradient(circle at top right, rgba(255,255,255,0.20), transparent 32%),
+    radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.18), transparent 24%);
   pointer-events: none;
 }
 
 .home-section .container {
   position: relative;
   z-index: 1;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .hero-badge {
@@ -96,18 +100,22 @@ section {
 .home-section h1 {
   font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 .home-section h4 {
   color: #fde68a;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .home-description {
   font-size: 1.06rem;
-  line-height: 1.8;
-  color: #e2e8f0;
+  line-height: 1.9;
+  color: #f8fafc;
   max-width: 660px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 .hero-pill-row {
@@ -119,16 +127,23 @@ section {
 .hero-pill {
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  color: white;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
   font-size: 0.92rem;
-  border: 1px solid rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.24);
+  font-weight: 600;
 }
 
 .home-section .btn-warning {
-  background: var(--accent);
+  background: linear-gradient(135deg, #fbbf24, var(--accent));
   border: none;
   color: #111827;
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
+}
+
+.home-section .btn-warning:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(245, 158, 11, 0.35);
 }
 
 .home-section .btn-outline-light:hover {
@@ -137,17 +152,32 @@ section {
 }
 
 .hero-visual {
-  padding: 20px;
+  padding: 22px;
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 20px 45px rgba(2, 8, 23, 0.2);
 }
 
 .stat-card {
   min-height: 230px;
   text-align: center;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  padding: 1.6rem 1.2rem;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.stat-card h4,
+.stat-card h2 {
+  color: #0f172a;
+}
+
+.stat-card p {
+  color: #475569;
+  line-height: 1.7;
 }
 
 .stat-card:hover {
