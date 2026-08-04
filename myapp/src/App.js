@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 // Pages
 import Home from "./components/Home";
-import About from "./components/About";
+
 import Dashboard from "./components/Dashboard";
 import Analyzer from "./components/Analyzer";
 import Report from "./components/Report";
@@ -16,10 +16,11 @@ import Contact from "./components/Contact";
 
 // New Pages
 import Login from "./components/Login";
+import ProtectedRoute from "./components/ProtectedRoute";
 // import Profile from "./components/Profile";
 
 import "./App.css";
-// import "./professional.css";
+import "./professional.css";
 
 function App() {
 
@@ -47,7 +48,7 @@ function App() {
             element={
               <>
                 <Home />
-                <About />
+                
                 <Contact />
               </>
             }
@@ -57,7 +58,14 @@ function App() {
           <Route path="/login" element={<Login />} />
 
           {/* Dashboard */}
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
 
           {/* Requirement Submission */}
           <Route path="/analyzer" element={<Analyzer />} />

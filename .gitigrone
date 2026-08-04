@@ -1,0 +1,8 @@
+node_modules/
+myapp/node_modules/
+
+build/
+myapp/build/
+
+.cache/
+.env

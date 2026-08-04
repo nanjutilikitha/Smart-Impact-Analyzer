@@ -5,7 +5,8 @@ import {
   FaLock,
   FaEye,
   FaEyeSlash,
-  FaRobot
+  FaRobot,
+  FaArrowLeft
 } from "react-icons/fa";
 
 function Login() {
@@ -25,13 +26,17 @@ function Login() {
       return;
     }
 
-    // Temporary Login
+    localStorage.setItem("isLoggedIn", "true");
     navigate("/dashboard");
   };
 
   return (
 
-    <section className="login-section">
+   <section className="login-section">
+   
+       <div className="circle circle1"></div>
+       <div className="circle circle2"></div>
+       <div className="circle circle3"></div>
 
       <div className="container">
 
@@ -46,11 +51,11 @@ function Login() {
 
               <div className="text-center mb-4">
 
-                <div className="login-logo">
-
-                  <FaRobot />
-
-                </div>
+               <div className="login-logo">
+               
+                   <FaRobot className="robot-icon"/>
+               
+               </div>
 
                 <h2 className="fw-bold mt-3">
                   Smart Impact Analyzer
@@ -143,21 +148,26 @@ function Login() {
                 </div>
 
                 <button
-                  className="btn btn-primary w-100 login-btn"
-                  type="submit"
+                className="btn login-btn w-100"
+                type="submit"
                 >
-
-                  Login
-
+                
+                Login Securely
+                
                 </button>
 
               </form>
 
               <div className="text-center mt-4">
 
-                <Link to="/">
-                  ← Back to Home
+                <Link className="back-home" to="/">
+                
+                <FaArrowLeft className="me-2"/>
+                
+                Back to Home
+                
                 </Link>
+                
 
               </div>
 

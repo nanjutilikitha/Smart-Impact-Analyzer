@@ -1498,3 +1498,260 @@ transform:translateY(0);
 }
 
 }
+/* ============================
+   LOGIN SECTION
+============================ */
+
+.login-section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#08142d,#123d8d,#2563eb);
+    position:relative;
+    overflow:hidden;
+}
+
+/* Animated Background */
+
+.login-section::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+    top:-200px;
+    left:-200px;
+    animation:moveCircle 12s infinite alternate;
+}
+
+.login-section::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(255,255,255,.06);
+    border-radius:50%;
+    bottom:-200px;
+    right:-200px;
+    animation:moveCircle2 10s infinite alternate;
+}
+
+/* Glass Card */
+
+.login-card{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:25px;
+
+    padding:45px;
+
+    color:white;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    transition:.4s;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+.login-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* Logo */
+
+.login-logo{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:white;
+
+    color:#2563eb;
+
+    font-size:40px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+    animation:float 4s infinite;
+
+}
+
+/* Input */
+
+.login-card label{
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:white;
+
+}
+
+.login-card .input-group{
+
+    margin-top:8px;
+
+}
+
+.login-card .input-group-text{
+
+    background:white;
+
+    border:none;
+
+    color:#2563eb;
+
+}
+
+.login-card .form-control{
+
+    border:none;
+
+    height:55px;
+
+    box-shadow:none;
+
+}
+
+.login-card .form-control:focus{
+
+    box-shadow:none;
+
+}
+
+/* Login Button */
+
+.login-btn{
+
+    height:55px;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    background:linear-gradient(90deg,#2563eb,#4f46e5);
+
+    border:none;
+
+    transition:.4s;
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+/* Links */
+
+.login-card a{
+
+    color:#ffd54f;
+
+    text-decoration:none;
+
+}
+
+.login-card a:hover{
+
+    color:white;
+
+}
+
+/* Floating */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+@keyframes moveCircle{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+100%{
+
+transform:translate(120px,80px);
+
+}
+
+}
+
+@keyframes moveCircle2{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+100%{
+
+transform:translate(-100px,-80px);
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.login-card{
+
+padding:30px;
+
+}
+
+}
