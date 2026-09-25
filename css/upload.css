@@ -1,0 +1,85 @@
+body {
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+.page-shell {
+    width: min(1100px, 90%);
+    margin: 40px auto;
+    padding: 30px 0 60px;
+}
+
+.page-intro {
+    margin-bottom: 25px;
+}
+
+.page-intro h1 {
+    color: #0b4f8a;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.page-intro p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #4b5563;
+}
+
+.panel {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.upload-card {
+    background: #f8fbff;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.upload-form label {
+    font-weight: bold;
+    color: #0b4f8a;
+    display:block;
+    margin-bottom:8px;
+}
+
+.upload-form input {
+    width:100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background:white;
+}
+
+.file-preview {
+    margin-top:10px;
+    padding:10px 12px;
+    background:white;
+    border-radius:8px;
+    color:#4b5563;
+    font-size:0.95rem;
+    border:1px dashed #cbd5e1;
+}
+
+.status-card {
+    margin-top:16px;
+    padding:14px 16px;
+    border-radius:10px;
+    background:#eef7ff;
+    color:#0b4f8a;
+    font-weight:600;
+}
+
+.status-card.error {
+    background:#fef2f2;
+    color:#b91c1c;
+}

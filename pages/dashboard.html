@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Smart Impact Analyzer</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="logo"><img src="../icons/app.svg" alt="Logo" class="nav-icon"> Smart Impact Analyzer</h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="upload.html">Upload</a></li>
+                <li><a href="result.html">Result</a></li>
+                <li><a href="report.html">Report</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="page-intro">
+            <h1>Dashboard</h1>
+            <p>Monitor the current analysis workflow and project health at a glance.</p>
+        </section>
+
+        <section class="stats-grid">
+            <article class="metric-card">
+                <h3>Active Projects</h3>
+                <p class="metric-value">12</p>
+            </article>
+            <article class="metric-card">
+                <h3>Completed Analyses</h3>
+                <p class="metric-value">48</p>
+            </article>
+            <article class="metric-card">
+                <h3>High Risk Changes</h3>
+                <p class="metric-value">6</p>
+            </article>
+            <article class="metric-card">
+                <h3>Avg. Effort</h3>
+                <p class="metric-value">4.8 days</p>
+            </article>
+        </section>
+
+        <section class="dashboard-grid">
+            <article class="panel panel-large">
+                <h2>Current Analysis Pulse</h2>
+                <div class="progress-row">
+                    <span>Module Match Confidence</span>
+                    <strong>82%</strong>
+                </div>
+                <div class="progress-bar"><span style="width:82%"></span></div>
+                <div class="progress-row">
+                    <span>Estimated Effort</span>
+                    <strong>5.2 days</strong>
+                </div>
+                <div class="progress-bar"><span style="width:70%"></span></div>
+                <div class="progress-row">
+                    <span>Budget Forecast</span>
+                    <strong>+$12.5k</strong>
+                </div>
+                <div class="progress-bar"><span style="width:60%"></span></div>
+            </article>
+
+            <article class="panel">
+                <h2>Latest Findings</h2>
+                <ul class="info-list">
+                    <li>Requirement variant A matched 8 impacted modules.</li>
+                    <li>Estimated cost increased by 14% after the change.</li>
+                    <li>Risk level remains moderate with strong test coverage.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip">NLP Match</span>
+                    <span class="chip">AI Prediction</span>
+                    <span class="chip">Impact Report</span>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Smart Impact Analyzer | AI Project
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
