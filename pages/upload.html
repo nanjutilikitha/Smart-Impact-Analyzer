@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Requirements | Smart Impact Analyzer</title>
+    <meta name="description" content="Upload requirement documents and begin AI-powered change analysis.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/upload.css">
+</head>
+<body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="topbar">
+        <nav class="nav-shell">
+            <a class="brand" href="../index.html">
+                <span class="brand-mark">S</span>
+                <span>Smart Impact Analyzer</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#features">Features</a>
+                <a href="../index.html#dashboard">Dashboard</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <a class="nav-login" href="upload.html">Upload</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section upload-hero reveal">
+            <div class="upload-copy">
+                <p class="eyebrow">Upload requirements</p>
+                <h1>Start your AI-powered impact analysis.</h1>
+                <p>Provide the original and revised requirement documents to receive a structured impact review with predictive insight.</p>
+            </div>
+
+            <div class="upload-panel">
+                <form class="upload-form" id="uploadForm">
+                    <div class="upload-card">
+                        <label for="oldRequirement">Old Requirement</label>
+                        <input id="oldRequirement" type="file" accept=".txt,.pdf,.doc,.docx" />
+                        <div id="oldPreview" class="file-preview">No file selected</div>
+                    </div>
+
+                    <div class="upload-card">
+                        <label for="newRequirement">New Requirement</label>
+                        <input id="newRequirement" type="file" accept=".txt,.pdf,.doc,.docx" />
+                        <div id="newPreview" class="file-preview">No file selected</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Analyze Changes</button>
+                </form>
+                <div id="analysisStatus" class="status-card" aria-live="polite">Ready to analyze your requirements.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-shell">
+            <div>
+                <h3>Smart Impact Analyzer</h3>
+                <p>AI-powered software change analysis for modern delivery teams.</p>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="../index.html#features">Features</a>
+                <a href="../index.html#dashboard">Dashboard</a>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <a href="upload.html">Upload</a>
+                <a href="result.html">Results</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Smart Impact Analyzer. All rights reserved.</div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../js/upload.js"></script>
+</body>
+</html>
